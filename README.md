@@ -20,9 +20,9 @@ This node integrates two asynchronous sensor sources to output a smoother and mo
 
 - **Weighted Fusion**: Combines IMU and visual GPS using weighted average:
 
-  $$
+$
 \text{fused\_pos} = \frac{\text{pos}_{imu}/\text{cov}_{imu} + \text{pos}_{vis}/\text{cov}_{vis}}{1/\text{cov}_{imu} + 1/\text{cov}_{vis}}
-$$
+$
   
   This ensures that sensors with higher certainty contribute more.
 
