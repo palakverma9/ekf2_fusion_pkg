@@ -19,10 +19,10 @@ This node integrates two asynchronous sensor sources to output a smoother and mo
 - **Covariance Estimation**: Each data source has an associated uncertainty (covariance). Lower covariance = more accurate = more trust.
 
 - **Weighted Fusion**: Combines IMU and visual GPS using weighted average:
-  
-  \[
-  \text{fused\_pos} = \frac{\text{pos}_\text{imu}/\text{cov}_\text{imu} + \text{pos}_\text{vis}/\text{cov}_\text{vis}}{1/\text{cov}_\text{imu} + 1/\text{cov}_\text{vis}}
-  \]
+
+  $$
+\text{fused\_pos} = \frac{\text{pos}_{imu}/\text{cov}_{imu} + \text{pos}_{vis}/\text{cov}_{vis}}{1/\text{cov}_{imu} + 1/\text{cov}_{vis}}
+$$
   
   This ensures that sensors with higher certainty contribute more.
 
